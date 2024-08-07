@@ -1,51 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DragonHub - Roblox Scripts</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DragonHub</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-default" id="navigate">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#" id="bbrand">DRAGONHUB</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li class="nav-item"><a class="glyphicon glyphicon-home" href="#">Home</a></li>
-                <li class="nav-item"><a class="glyphicon glyphicon-scripts" href="#">Scripts</a></li>
-                <li class="nav-item"><a class="glyphicon glyphicon-stats" href="#">Stats</a></li>
-                <li class="nav-item"><a class="glyphicon glyphicon-education" href="#">About</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Content Section -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div id="main-content">
-                    <img src="dragon_image.png" alt="Dragon Image" id="dragon-image" class="img-responsive">
-                    <p>Welcome to DragonHub! Explore the latest Roblox scripts and unleash the power of dragons in your games.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+<header>
+  <img src="dragon-logo.png" alt="Dragon Logo">
+</header>
 
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="container">
-            <p class="text-center">Wednesday, August 7, 2024</p>
-        </div>
-    </footer>
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Scripts</a>
+  <a href="#">Stats</a>
+  <a href="#">About</a>
+</nav>
 
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="./script.js"></script>
+<main>
+  <img src="dragon-image.png" alt="Dragon Image" class="dragon-img">
+  <div class="inner">
+    <p data-js="typing">Welcome to DragonHub! Explore the latest Roblox scripts and unleash the power of dragons in your games.</p>
+    <p class="cursor"></p>
+  </div>
+</main>
+
+<footer>
+  <p>Wednesday, August 7, 2024</p>
+</footer>
+
+<script src="scripts.js"></script>
 </body>
 </html>
