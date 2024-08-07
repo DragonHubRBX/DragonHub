@@ -3,9 +3,22 @@ window.onload = function() {
     // Hide loading screen
     document.getElementById("loading").style.display = "none";
 
+    // Display current date and time
+    displayDateTime();
+
     // Load scripts
-    loadScripts();
+    if (document.getElementById('scripts-list')) {
+        loadScripts();
+    }
 };
+
+function displayDateTime() {
+    const dateTimeElement = document.getElementById('date-time');
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+    const now = new Date().toLocaleDateString('en-US', options);
+    dateTimeElement.textContent = now;
+    setTimeout(displayDateTime, 1000); // Update every second
+}
 
 let scriptClicks = JSON.parse(localStorage.getItem('scriptClicks')) || {};
 
@@ -33,12 +46,3 @@ function loadScripts() {
 
 // Function to handle clicks
 function handleClick(scriptId) {
-    const userClicked = localStorage.getItem(`clicked-${scriptId}`);
-    
-    if (!userClicked) {
-        scriptClicks[scriptId] = (scriptClicks[scriptId] || 0) + 1;
-        localStorage.setItem('scriptClicks', JSON.stringify(scriptClicks));
-        localStorage.setItem(`clicked-${scriptId}`, 'true');
-        document.getElementById(`clicks-${scriptId}`).textContent = scriptClicks[scriptId];
-    }
-}
