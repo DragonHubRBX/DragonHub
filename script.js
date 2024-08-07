@@ -51,4 +51,4 @@ function handleClick(scriptId) {
     localStorage.setItem('scriptClicks', JSON.stringify(scriptClicks));
     localStorage.setItem(`clicked-${scriptId}`, 'true');
     document.getElementById(`clicks-${scriptId}`).textContent = scriptClicks[scriptId];
-    }
+    }}
