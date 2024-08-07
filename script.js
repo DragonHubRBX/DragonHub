@@ -1,56 +1,44 @@
-const TYPING_SPEED = 50;
-let $targetList;
+// script.js
+window.onload = function() {
+    // Hide loading screen
+    document.getElementById("loading").style.display = "none";
 
-const init = () => {
-    $targetList = document.querySelectorAll('[data-js="typing"]');
-    setup();
-    run();
-    displayDateTime();
+    // Load scripts
+    loadScripts();
 };
 
-const setup = () => {
-    for (const $dom of $targetList) {
-        const textList = $dom.innerText.split('');
-        let html = '';
-        for (const char of textList) {
-            html += `<span>${char}</span>`;
-        }
-        $dom.innerHTML = html;
+let scriptClicks = JSON.parse(localStorage.getItem('scriptClicks')) || {};
+
+// Function to load scripts dynamically
+function loadScripts() {
+    const scripts = [
+        { id: 1, name: "Dragon Slayer", description: "A powerful script for defeating dragons.", img: "script1.png" },
+        { id: 2, name: "Treasure Hunter", description: "Find hidden treasures with ease.", img: "script2.png" }
+    ];
+
+    const scriptsList = document.getElementById('scripts-list');
+    scripts.forEach(script => {
+        const scriptElement = document.createElement('div');
+        scriptElement.classList.add('script-item');
+        scriptElement.innerHTML = `
+            <img src="${script.img}" alt="${script.name}">
+            <h3>${script.name}</h3>
+            <p>${script.description}</p>
+            <button onclick="handleClick(${script.id})">View Script</button>
+            <span>Clicks: <span id="clicks-${script.id}">${scriptClicks[script.id] || 0}</span></span>
+        `;
+        scriptsList.appendChild(scriptElement);
+    });
+}
+
+// Function to handle clicks
+function handleClick(scriptId) {
+    const userClicked = localStorage.getItem(`clicked-${scriptId}`);
+    
+    if (!userClicked) {
+        scriptClicks[scriptId] = (scriptClicks[scriptId] || 0) + 1;
+        localStorage.setItem('scriptClicks', JSON.stringify(scriptClicks));
+        localStorage.setItem(`clicked-${scriptId}`, 'true');
+        document.getElementById(`clicks-${scriptId}`).textContent = scriptClicks[scriptId];
     }
-};
-
-const run = () => {
-    let delay = 0;
-    for (let i = 0; i < $targetList.length; i++) {
-        const $target = $targetList[i];
-        const $chars = $target.querySelectorAll('span');
-        for (let l = 0; l < $chars.length; l++) {
-            const $char = $chars[l];
-            const text = $char.textContent;
-            delay += TYPING_SPEED;
-            if (text === ' ') delay += TYPING_SPEED * 2;
-            const animate = () => {
-                $char.style.display = 'inline-block';
-            };
-            setTimeout(animate, delay);
-            if ($chars.length - 1 <= l) {
-                delay += TYPING_SPEED * 4;
-                setTimeout(() => $target.style.display = 'block', delay);
-            }
-        }
-    }
-};
-
-const displayDateTime = () => {
-    const dateTimeElement = document.getElementById('date-time');
-    const updateDateTime = () => {
-        const now = new Date();
-        const dateString = now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-        const timeString = now.toLocaleTimeString('en-US');
-        dateTimeElement.innerHTML = `${dateString}<br>${timeString}`;
-    };
-    updateDateTime();
-    setInterval(updateDateTime, 1000);
-};
-
-document.addEventListener('DOMContentLoaded', init, false);
+}
