@@ -1,36 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DragonHub</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DragonHub</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="logo-container">
+            <img src="dragon-logo.png" alt="DragonHub Logo" class="logo-image">
+            <div id="date-time" class="date-time"></div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="scroll-container">
+            <img src="scroll.png" alt="Scroll Background" class="scroll-image">
+            <div class="scroll-text">
+                <p data-js="typing">Welcome to DragonHub!</p>
+                <p data-js="typing">Explore the latest Roblox scripts</p>
+                <p data-js="typing">and unleash the power</p>
+                <p data-js="typing">of dragons in your games.</p>
+            </div>
+        </div>
+    </main>
 
-<header>
-  <img src="dragon-logo.png" alt="Dragon Logo">
-</header>
-
-<nav>
-  <a href="#">Home</a>
-  <a href="#">Scripts</a>
-  <a href="#">Stats</a>
-  <a href="#">About</a>
-</nav>
-
-<main>
-  <img src="dragon-image.png" alt="Dragon Image" class="dragon-img">
-  <div class="inner">
-    <p data-js="typing">Welcome to DragonHub! Explore the latest Roblox scripts and unleash the power of dragons in your games.</p>
-    <p class="cursor"></p>
-  </div>
-</main>
-
-<footer>
-  <p>Wednesday, August 7, 2024</p>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
