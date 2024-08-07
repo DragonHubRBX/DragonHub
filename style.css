@@ -1,65 +1,18 @@
 body {
-    background-color: rgba(100, 0, 0, 1);
+    background-color: #5C0A0A;
     margin: 5px;
+    font-family: Lato, sans-serif;
+    color: #fff;
 }
 
-#sub_form {
-    text-shadow: 1px 1px 1px white;
-    text-decoration: underline;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: Palatino, serif;
-    letter-spacing: 1em;
-}
-
-#all_btn {
-    width: 150px;
-    box-shadow: 0px 1px 10px 0px black;
-    border-radius: 0px 0px 100px 0px;
-    letter-spacing: 1px;
-    margin: 10px;
-}
-
-#all_btn:focus {
-    display: none;
-}
-
-#enter_btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 100px;
-    outline: 0;
-    box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 1);
-}
-
-#enter_btn:focus {
-    display: none;
-}
-
-#text_box {
-    text-align: center;
-    margin: 10px;
-    border: inset 4px rgba(130, 0, 0, .1);
-    height: 35px;
-    width: 30%;
-    letter-spacing: .3em;
-    background-color: black;
-    color: white;
-}
-
-#mugen {
-    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 1);
-    padding: 30px;
-    border: 4px solid #fff;
-    width: 35%;
-    border-radius: 10px 10px 500px 500px;
-    background-image: linear-gradient(to top right, #220000, #440000, #660000, #880000, #cc0000, #ff0000);
+#navigate {
+    box-shadow: 0px 1px 12px 3px #250001;
+    border-radius: 0px 0px 100px 100px;
+    background-color: #880000;
 }
 
 #bbrand {
     border-radius: 0px 100px 0px 100px;
-    border-right: inset 3px #000000;
-    border-left: inset 3px #000000;
     background-image: linear-gradient(to top right, #220000, #440000, #660000, #880000, #cc0000, #ff0000);
     color: white;
     letter-spacing: .2em;
@@ -68,24 +21,35 @@ body {
     text-shadow: 0px 0px 20px #ff0000;
 }
 
-#navigate {
-    box-shadow: 0px 1px 12px 3px #250001;
-    letter-spacing: 5px;
-    border-radius: 0px 0px 100px 100px;
+.navbar-nav > li > a {
+    color: white;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px #ff0000;
 }
 
-span {
-    letter-spacing: .3em;
-    font-family: Lato, sans-serif;
-    text-transform: uppercase;
-    font-style: italic;
-    text-shadow: 1px 1px 10px;
+#main-content {
+    text-align: center;
+    margin-top: 50px;
 }
 
-label {
-    letter-spacing: .5em;
-    font-family: Lato, sans-serif;
-    text-transform: uppercase;
-    font-style: italic;
-    text-shadow: 0px 1px 15px;
+#dragon-image {
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #250001;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+p {
+    font-size: 18px;
+    letter-spacing: 0.05em;
 }
