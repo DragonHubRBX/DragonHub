@@ -1,55 +1,126 @@
+/* Reset CSS */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
 body {
-    background-color: #5C0A0A;
-    margin: 5px;
-    font-family: Lato, sans-serif;
-    color: #fff;
+  background-color: #500000;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
 }
 
-#navigate {
-    box-shadow: 0px 1px 12px 3px #250001;
-    border-radius: 0px 0px 100px 100px;
-    background-color: #880000;
+header {
+  width: 100%;
+  background-color: #000;
+  padding: 10px;
+  box-shadow: 0px 4px 2px -2px gray;
+  text-align: center;
 }
 
-#bbrand {
-    border-radius: 0px 100px 0px 100px;
-    background-image: linear-gradient(to top right, #220000, #440000, #660000, #880000, #cc0000, #ff0000);
-    color: white;
-    letter-spacing: .2em;
-    font-family: Lato, sans-serif;
-    text-transform: uppercase;
-    text-shadow: 0px 0px 20px #ff0000;
+header img {
+  max-width: 100px;
 }
 
-.navbar-nav > li > a {
-    color: white;
-    font-weight: bold;
-    text-shadow: 0px 0px 10px #ff0000;
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #8B0000;
+  width: 100%;
+  padding: 10px 0;
 }
 
-#main-content {
-    text-align: center;
-    margin-top: 50px;
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background 0.3s;
 }
 
-#dragon-image {
-    width: 50%;
-    margin: 0 auto;
-    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 1);
-    border-radius: 10px;
+nav a:hover {
+  background-color: #660000;
+}
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  text-align: center;
+}
+
+main img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 footer {
-    background-color: #250001;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  margin-top: auto;
+  padding: 10px;
+  background-color: #000;
+  width: 100%;
+  text-align: center;
+  color: white;
 }
 
-p {
-    font-size: 18px;
-    letter-spacing: 0.05em;
+.inner {
+  max-width: 100%;
+  padding: 2em;
+  border: 4px solid #fff;
+  border-radius: 4px;
+}
+
+p[data-js="typing"] {
+  display: inline;
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  line-height: 2em;
+}
+
+span {
+  display: none;
+  min-width: 1em;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background-color: #fff;
+  -webkit-animation: flash 0.8s infinite;
+          animation: flash 0.8s infinite;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
