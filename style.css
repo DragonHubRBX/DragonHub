@@ -4,16 +4,18 @@ body {
     font-family: 'Press Start 2P', cursive;
     background: url('your-background-image.jpg') no-repeat center center fixed;
     background-size: cover;
+    color: #fff; /* Changed text color to white */
 }
 
 header {
     position: relative;
+    text-align: center;
+    margin-bottom: 50px; /* Added margin for better spacing */
 }
 
 .logo-container {
     position: relative;
     display: inline-block;
-    margin: 20px auto;
 }
 
 .logo-image {
@@ -36,46 +38,24 @@ header {
     white-space: nowrap;
 }
 
-.scroll-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin: 20px auto;
-    max-width: 90%;
-    padding: 20px;
-}
-
-.scroll-image {
-    width: 100%;
-    max-width: 600px;
-}
-
 .scroll-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
-    width: 70%;
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 18px;
 }
 
 p {
-    color: #000;
-    font-size: 14px;
-    line-height: 2em;
+    margin: 10px 0;
 }
 
 @media screen and (max-width: 768px) {
-    .scroll-image {
-        max-width: 100%;
-    }
-
-    header img {
+    .logo-image {
         max-width: 80%;
     }
 
     .scroll-text {
-        width: 90%;
+        font-size: 16px;
+        max-width: 90%;
     }
 }
