@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DragonHub - Home</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Loading Animation -->
     <div id="loading">
         <img src="dragon-animation.gif" alt="Loading...">
     </div>
 
+    <!-- Header -->
     <header>
-        <h1>Welcome to DragonHub!</h1>
+        <div class="logo-date-container">
+            <img src="dragon-logo.png" alt="DragonHub Logo" class="logo">
+            <div id="date-time" class="date-time"></div>
+        </div>
+        <h1 class="welcome-text">Welcome to DragonHub!</h1>
         <nav>
             <ul>
                 <li><a href="scripts.html">Scripts</a></li>
@@ -22,17 +29,19 @@
         </nav>
     </header>
 
+    <!-- Main Content -->
     <main>
         <section>
-            <h2>Explore the latest Roblox scripts</h2>
-            <p>Unleash the power of dragons in your games!</p>
+            <div class="scroll">
+                <h2>Explore the latest Roblox scripts</h2>
+                <p>Unleash the power of dragons in your games!</p>
+            </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 DragonHub</p>
+        <p>&copy; 2024 DragonHub. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
