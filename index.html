@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="charset UTF-8">
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - My First Java</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'><link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav class="navbar navbar-default" id="navigate">
+   <a class="navbar-brand" href="#" id="bbrand">dragon</a>
+   <nav>
+      <ul class="nav navbar-nav">
+         <li class="nav-item"><a class="glyphicon glyphicon-home" href="#">Home</a></li>
+         <li class="nav-item"><a class="glyphicon glyphicon-credit-card" href="#">Pricing</a></li>
+         <li class="nav-item "><a class="glyphicon glyphicon-stats" href="#">Features</a></li>
+         <li class="nav-item"><a class="glyphicon glyphicon-education" href="#">About</a></li>
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+         <li class="nav-item "><button class="glyphicon glyphicon-user btn btn-primary" id="all_btn" href="#" data-toggle="modal" data-target="#xin"> LOGIN</button></li>
+      </ul>
+   </nav>
+</nav>
+
+<hr id="hd_row">
+<div class="container-fluid col-xl-1"><img src=""></div>
+<p></p>
+<center>
+   <form id="mugen">
+      <span style="color:#fff">Choose Option:</span>
+      <select id="slct1" name="slct1" onchange="populate(this.id ,'slct2')">
+     <option value=""></option>
+     <option value="op2">Option 1</option>
+     <option value="op3">Option 2</option>
+     <option value="op4">Option 3</option>
+ </select>
+      <br>
+      <br>
+      <span style="color:#fff;">Choose Option:</span>
+      <select id="slct2" name="slct2" onchange="change(this.id , 'text_box')">
+    
+ </select>
+      <br>
+      <br>
+      <label for="com" style="color:#fff;">Type:</label>
+      <select class="ui-autocomplete-input" id="text_box" name="com" style="height:20px; width:20%; background-color:rgb(200,90,50); border:none;color:white" ></select>
+</center>
+
+</div>
+<center>
+   <footer id="time" style="color:white;position:fixed;left:0;right:0; bottom:0; background-color:black;"></footer>
+</center>
+
+<div class="modal fade" id="xin" role="dialog">
+   <div class="modal-dialog">
+   <div class="modal-content">
+      <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h2 class="modal-title">Dragon Login</h4>
+      </div>
+       <div class="modal-body">
+          <p align="center">Login Like a Dragon</p>
+        </div>
+       <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="enter_btn" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+   </div>
+</div>
+<!-- partial -->
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+<script src='https://code.jquery.com/ui/1.12.0/jquery-ui.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
