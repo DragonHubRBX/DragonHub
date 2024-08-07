@@ -46,3 +46,9 @@ function loadScripts() {
 
 // Function to handle clicks
 function handleClick(scriptId) {
+    if (!userClicked) {
+    scriptClicks[scriptId] = (scriptClicks[scriptId] || 0) + 1;
+    localStorage.setItem('scriptClicks', JSON.stringify(scriptClicks));
+    localStorage.setItem(`clicked-${scriptId}`, 'true');
+    document.getElementById(`clicks-${scriptId}`).textContent = scriptClicks[scriptId];
+    }
